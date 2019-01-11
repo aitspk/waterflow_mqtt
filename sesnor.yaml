@@ -1,0 +1,13 @@
+ - platform: mqtt
+    state_topic: "home/sensor/WaterTap1"
+    name: "Water Tap"
+    unit_of_measurement: 'm/L'
+    value_template: "{{ value_json.status }}"
+    json_attributes:
+      - device
+      - sensorType
+      - status
+      - flowrate
+      - flowratefrac
+      - currentflow
+      - totalml
